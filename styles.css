@@ -196,7 +196,7 @@ body {
     margin-top: 2rem;
 }
 
-.content-card {
+.content-card.free {
     background: white;
     padding: 2rem;
     border-radius: 15px;
@@ -204,6 +204,26 @@ body {
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
+}
+
+.content-card.free:nth-child(3) {
+    border: 2px solid #28a745;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fff9 100%);
+    position: relative;
+}
+
+.content-card.free:nth-child(3)::before {
+    content: "MAIS POPULAR";
+    position: absolute;
+    top: -10px;
+    right: -30px;
+    background: #28a745;
+    color: white;
+    padding: 20px 30px 5px;
+    transform: rotate(45deg);
+    font-size: 0.7rem;
+    font-weight: bold;
+    z-index: 1;
 }
 
 .content-card:hover {
