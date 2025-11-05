@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife - Seu Guia para uma Vida Saudável</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>FitLife</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#conteudo">Conteúdo</a></li>
+                    <li><a href="#premium" class="premium-link">Premium</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Transforme sua Vida com Fitness</h1>
+                <p>Descubra os segredos para alcançar sua melhor forma física e mental com nosso guia completo.</p>
+                <button class="cta-button" onclick="scrollToSection('conteudo')">Comece Agora</button>
+            </div>
+        </section>
+
+        <section id="sobre" class="about">
+            <div class="container">
+                <h2>Por Que Escolher o FitLife?</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="icon">🏋️</div>
+                        <h3>Treinos Eficazes</h3>
+                        <p>Aprenda técnicas comprovadas de exercícios físicos para maximizar seus resultados.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">🥗</div>
+                        <h3>Nutrição Balanceada</h3>
+                        <p>Descubra como uma alimentação adequada pode acelerar sua transformação.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="icon">🧠</div>
+                        <h3>Mentalidade Forte</h3>
+                        <p>Desenvolva a disciplina e motivação necessárias para alcançar seus objetivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="conteudo" class="content">
+            <div class="container">
+                <h2>Conteúdo Gratuito</h2>
+                <div class="content-grid">
+                    <div class="content-card free">
+                        <h3>🎯 Básicos do Fitness</h3>
+                        <ul>
+                            <li>Como começar sua jornada fitness</li>
+                            <li>Exercícios fundamentais para iniciantes</li>
+                            <li>Dicas de segurança nos treinos</li>
+                            <li>Importância do aquecimento</li>
+                        </ul>
+                        <span class="badge free">Grátis</span>
+                    </div>
+                    <div class="content-card free">
+                        <h3>🥑 Nutrição Básica</h3>
+                        <ul>
+                            <li>Alimentos essenciais para fitness</li>
+                            <li>Como montar refeições saudáveis</li>
+                            <li>Hidratação e seu papel no desempenho</li>
+                            <li>Suplementação básica</li>
+                        </ul>
+                        <span class="badge free">Grátis</span>
+                    </div>
+                    <div class="content-card premium-preview">
+                        <h3>💎 Treinos Avançados (Premium)</h3>
+                        <ul>
+                            <li>🔒 Rotinas de treino detalhadas</li>
+                            <li>🔒 Técnicas avançadas de hipertrofia</li>
+                            <li>🔒 Periodização de treinos</li>
+                            <li>🔒 Recuperação muscular otimizada</li>
+                        </ul>
+                        <span class="badge premium">Premium</span>
+                        <button class="unlock-button" onclick="showPremiumModal()">Desbloquear</button>
+                    </div>
+                    <div class="content-card premium-preview">
+                        <h3>📊 Planos Alimentares (Premium)</h3>
+                        <ul>
+                            <li>🔒 Dietas personalizadas por objetivo</li>
+                            <li>🔒 Cálculo de macros detalhado</li>
+                            <li>🔒 Cardápios semanais completos</li>
+                            <li>🔒 Receitas fitness saborosas</li>
+                        </ul>
+                        <span class="badge premium">Premium</span>
+                        <button class="unlock-button" onclick="showPremiumModal()">Desbloquear</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="premium" class="premium-section">
+            <div class="container">
+                <h2>FitLife Premium</h2>
+                <div class="premium-card">
+                    <h3>Desbloqueie Todo o Potencial</h3>
+                    <div class="price">
+                        <span class="currency">R$</span>
+                        <span class="amount">20</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="premium-features">
+                        <li>✅ Acesso completo a todos os treinos</li>
+                        <li>✅ Planos alimentares personalizados</li>
+                        <li>✅ Acompanhamento de progresso</li>
+                        <li>✅ Suporte personalizado</li>
+                        <li>✅ Vídeos exclusivos</li>
+                        <li>✅ Atualizações mensais</li>
+                    </ul>
+                    <button class="premium-cta" onclick="showPremiumModal()">Assinar Premium</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 FitLife. Todos os direitos reservados.</p>
+            <p>Transformando vidas através do fitness.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Premium -->
+    <div id="premiumModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closePremiumModal()">&times;</span>
+            <h2>Assine o FitLife Premium</h2>
+            <p>Desbloqueie todo o conteúdo premium por apenas <strong>R$20/mês</strong></p>
+            <div class="payment-info">
+                <h3>Métodos de Pagamento:</h3>
+                <div class="payment-methods">
+                    <div class="payment-option">
+                        <input type="radio" id="pix" name="payment" value="pix" checked>
+                        <label for="pix">💠 PIX</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="card" name="payment" value="card">
+                        <label for="card">💳 Cartão de Crédito</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="boleto" name="payment" value="boleto">
+                        <label for="boleto">📄 Boleto Bancário</label>
+                    </div>
+                </div>
+                <p class="disclaimer">⚠️ Sistema de pagamento em desenvolvimento. Em breve disponível!</p>
+            </div>
+            <button class="confirm-button" onclick="confirmPremium()">Confirmar Assinatura</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
